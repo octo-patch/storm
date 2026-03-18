@@ -462,12 +462,13 @@ class MiniMaxModel(dspy.OpenAI):
     """A wrapper class for MiniMax API (https://www.minimaxi.com/), compatible with dspy.OpenAI.
 
     MiniMax provides OpenAI-compatible chat completion endpoints.
-    Available models include 'MiniMax-M2.5' and 'MiniMax-M2.5-highspeed' (204K context window).
+    Available models include 'MiniMax-M2.7', 'MiniMax-M2.7-highspeed',
+    'MiniMax-M2.5' and 'MiniMax-M2.5-highspeed' (204K context window).
     """
 
     def __init__(
         self,
-        model: str = "MiniMax-M2.5",
+        model: str = "MiniMax-M2.7",
         api_key: Optional[str] = None,
         api_base: str = "https://api.minimax.io/v1",
         **kwargs,

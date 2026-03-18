@@ -268,7 +268,7 @@ python examples/storm_examples/run_storm_wiki_minimax.py \
     --do-polish-article
 ```
 
-MiniMax offers `MiniMax-M2.5` and `MiniMax-M2.5-highspeed` models with a 204K context window. Use `--model MiniMax-M2.5-highspeed` for faster inference.
+MiniMax offers `MiniMax-M2.7` (latest flagship), `MiniMax-M2.7-highspeed`, `MiniMax-M2.5`, and `MiniMax-M2.5-highspeed` models with a 204K context window. The default model is `MiniMax-M2.7`. Use `--model MiniMax-M2.7-highspeed` for faster inference.
 
 **To run STORM using your favorite language models or grounding on your own corpus:** Check out [examples/storm_examples/README.md](examples/storm_examples/README.md).
 
