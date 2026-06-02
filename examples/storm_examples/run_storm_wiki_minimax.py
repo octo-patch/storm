@@ -76,8 +76,9 @@ def main(args):
         "top_p": args.top_p,
     }
 
-    # MiniMax offers 'MiniMax-M2.7' (latest flagship) and 'MiniMax-M2.7-highspeed' (faster)
-    # Previous models 'MiniMax-M2.5' and 'MiniMax-M2.5-highspeed' are also available
+    # MiniMax offers 'MiniMax-M3' (latest flagship, default) with 512K context window
+    # and image input support. Previous models 'MiniMax-M2.7' and 'MiniMax-M2.7-highspeed'
+    # are also available.
     conv_simulator_lm = MiniMaxModel(
         model=args.model, max_tokens=500, **minimax_kwargs
     )
@@ -190,9 +191,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        choices=["MiniMax-M2.7", "MiniMax-M2.7-highspeed", "MiniMax-M2.5", "MiniMax-M2.5-highspeed"],
-        default="MiniMax-M2.7",
-        help='MiniMax model to use. "MiniMax-M2.7" (latest flagship) for standard tasks, "MiniMax-M2.7-highspeed" for faster inference.',
+        choices=["MiniMax-M3", "MiniMax-M2.7", "MiniMax-M2.7-highspeed"],
+        default="MiniMax-M3",
+        help='MiniMax model to use. "MiniMax-M3" (latest flagship, default) for standard tasks, "MiniMax-M2.7-highspeed" for faster inference.',
     )
     parser.add_argument(
         "--temperature", type=float, default=1.0, help="Sampling temperature to use."
